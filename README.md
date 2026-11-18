@@ -12,27 +12,16 @@ js/main.js      Mobile menu, image placeholders, gallery lightbox
 CNAME           Custom domain for GitHub Pages
 ```
 
-## Images to add
+## Images
 
-Put the photos in `images/` using these exact names. Until a photo is added, its spot shows a grey box labelled with the filename it's waiting for.
+All photos are in `images/`, resized and compressed for the web:
 
-| File | Where it shows |
-|---|---|
-| `images/hero.jpg` | Home, full-screen hero (landscape, ~2400px wide) |
-| `images/ana.jpg` | Home, next to Our Services |
-| `images/contact.jpg` | Home, contact section |
-| `images/gallery/01.jpg` … `15.jpg` | Home, scrolling gallery strip (portrait) |
-| `images/projects/enze-1.jpg` … `enze-6.jpg` | Gallery, Enze Bakery |
-| `images/projects/ausrealty-1.jpg` … `-6.jpg` | Gallery, AusRealty |
-| `images/projects/malkonyan-1.jpg` … `-6.jpg` | Gallery, Malkonyan |
-| `images/projects/carniceria-1.jpg` … `-6.jpg` | Gallery, Carniceria Greenfield |
-| `images/about.jpg` | About, hero image |
-| `images/team/ana-campos.jpg`, `maria-andrea.jpg`, `andrew-hosick.jpg` | About, team |
-| `images/clients/client-1.png` … `client-8.png` | About, client logos (transparent PNG) |
-| `images/favicon.png` | Browser tab icon (square, 512px) |
+- `hero.jpg`, `ana.jpg`, `contact.jpg`, `about.jpg`: page images
+- `projects/<project>-<n>.jpg`: the Gallery page, which also feeds the scrolling strip on Home
+- `team/`: About page portraits
+- `logo.svg`, `favicon.svg`: brand logo and browser tab icon
 
-To add or remove gallery photos, copy or delete a `<div class="ph">…</div>` line in `gallery.html`.
-Keep photos under ~400 KB each. Resize to about 2000px on the long edge and export as JPG at 80%.
+**To add a project photo:** export it as a JPG about 1400px on the long edge and save it as `images/projects/<project>-<next number>.jpg`. Then raise that project's count in `gallery.html` by copying one of its `<div class="ph">…</div>` lines and changing the number.
 
 ## Going live with your domain (Crazy Domains)
 
