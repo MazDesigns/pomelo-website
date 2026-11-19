@@ -113,7 +113,7 @@ main { padding-top: var(--header-h); }
 .section-head .rule { flex: 1; height: 1px; background: var(--brown); opacity: .4; }
 .strip { position: relative; overflow: hidden; touch-action: pan-y; user-select: none; }
 .strip-track { display: flex; gap: 1px; width: max-content; will-change: transform; }
-.strip-track > a { flex: 0 0 clamp(200px, 20vw, 300px); -webkit-user-drag: none; }
+.strip-track > a { flex: 0 0 clamp(240px, 25vw, 480px); -webkit-user-drag: none; }
 .strip img { -webkit-user-drag: none; pointer-events: none; }
 .strip .ph { aspect-ratio: 3/4; }
 .strip .ph img { transition: transform .6s; }
@@ -202,4 +202,8 @@ main { padding-top: var(--header-h); }
 
 @media (max-width: 720px) {
   .hero { align-items: flex-end; padding-bottom: 56px; }
+}
+
+@media (max-width: 720px) {
+  .strip-track > a { flex-basis: 64vw; }
 }
