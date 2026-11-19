@@ -52,7 +52,8 @@ if (strip) {
   let offset = 0, last = performance.now();
   let hovering = false, pausedUntil = 0, tween = null, drag = null;
 
-  const loopWidth = () => track.scrollWidth / 2;
+  // Exact distance from the first photo to its copy, so the loop has no jump
+  const loopWidth = () => track.children[originals.length].offsetLeft - originals[0].offsetLeft;
   const step = () => originals[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
   const wrap = x => { const w = loopWidth(); return ((x % w) + w) % w; };
   const render = () => { track.style.transform = `translate3d(${-wrap(offset)}px,0,0)`; };
