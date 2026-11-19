@@ -112,10 +112,10 @@ main { padding-top: var(--header-h); }
 }
 .section-head .rule { flex: 1; height: 1px; background: var(--brown); opacity: .4; }
 .strip { position: relative; overflow: hidden; touch-action: pan-y; user-select: none; }
-.strip-track { display: flex; gap: 2px; width: max-content; will-change: transform; }
+.strip-track { display: flex; gap: 1px; width: max-content; will-change: transform; }
 .strip-track > a { flex: 0 0 clamp(200px, 20vw, 300px); -webkit-user-drag: none; }
 .strip img { -webkit-user-drag: none; pointer-events: none; }
-.strip .ph { aspect-ratio: 2/3; }
+.strip .ph { aspect-ratio: 3/4; }
 .strip .ph img { transition: transform .6s; }
 .strip-track > a:hover .ph img { transform: scale(1.04); }
 .strip.dragging { cursor: grabbing; }

@@ -53,7 +53,7 @@ if (strip) {
   let hovering = false, pausedUntil = 0, tween = null, drag = null;
 
   const loopWidth = () => track.scrollWidth / 2;
-  const step = () => originals[0].getBoundingClientRect().width + 2;
+  const step = () => originals[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
   const wrap = x => { const w = loopWidth(); return ((x % w) + w) % w; };
   const render = () => { track.style.transform = `translate3d(${-wrap(offset)}px,0,0)`; };
 
